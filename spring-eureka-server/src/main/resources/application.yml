@@ -1,0 +1,33 @@
+#---
+#server:
+#  port: 8000
+#spring:
+#  profiles: master
+#  application:
+#    name: eureka-server-master
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:8001/eureka/
+#---
+#server:
+#  port: 8001
+#spring:
+#  profiles: slave
+#  application:
+#    name: eureka-server-slave
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:8000/eureka/
+server:
+  port: 8000
+spring:
+  application:
+    name: eureka-server-master
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/
