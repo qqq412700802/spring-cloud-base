@@ -10,3 +10,10 @@ server:
 feign:
   hystrix:
     enabled: true
+#spring boot 2.0新增配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+      base-path: /
